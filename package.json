@@ -1,0 +1,11 @@
+{
+  "name": "chadwickpoon-website",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "dev": "python3 -m http.server 4317 --bind 127.0.0.1 --directory dist",
+    "check": "node --check script.js"
+  }
+}
