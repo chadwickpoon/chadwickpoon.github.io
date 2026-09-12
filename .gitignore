@@ -4,3 +4,9 @@ node_modules/
 .env
 .env.*
 !.env.example
+.next/
+.vercel/
+.cache/
+test-results/
+playwright-report/
+*.tsbuildinfo

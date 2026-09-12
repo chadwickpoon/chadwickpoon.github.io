@@ -1,21 +1,30 @@
 # Chadwick Poon personal website
 
-This repository is Chadwick's personal portfolio at chadwickpoon.com. Treat the website and any career history already present as source material, not as verified current claims. Do not import private employer or business material or invent dates, roles, outcomes, or metrics.
+This is a personal, non-commercial portfolio. Use only public or user-approved biographical content. Do not invent roles, dates, outcomes, trip data, or metrics, and do not import private employer or Videoath operational material.
 
-## Editing
+## Product direction
 
-- Edit index.html, style.css, and script.js at the repository root. Keep the current design unless Chadwick requests a redesign.
-- The site content is static HTML, CSS, and JavaScript. A small dependency-free Worker serves public assets and redirects www to the canonical apex domain; it has no database. Do not introduce a framework without a concrete need.
-- Put public assets in assets/, images/, or fonts/. The build also copies root HTML, CSS, JS, image, font, PDF, and webmanifest files.
-- Run npm run check and npm run build after relevant edits. Generated dist/ output is not the editing source.
-- For local preview, build first, then run npm run dev.
+Read the canonical [Personal Site brief](</Users/chadwick.poon/Library/Mobile Documents/iCloud~md~obsidian/Documents/alan-skills/Knowledge Base/20 Personal/Projects/Personal Site/Personal Site.md>) and decision record before design/content work. The selected direction combines Neal.fun’s thumbnail gallery, a Duolingo-inspired welcome, and selected original Videoath character assets. Exact character and deeper experience designs remain reviewable.
 
-## Identity and publishing
+## Architecture
 
-- Use repository-local Chadwick Poon <chadwickpoon@gmail.com> and user.useConfigOnly=true. Never change global Git identity.
-- Before a GitHub push, verify origin is chadwickpoon/chadwickpoon.github.io and gh api user returns chadwickpoon. Inspect outgoing author and committer emails for any incorrect employer identity.
-- GitHub Pages remains configured on origin/master as the previous host. Namecheap DNS now points chadwickpoon.com and www.chadwickpoon.com to ChatGPT Sites. Keep the personal site hosted in the existing Sites project.
-- Use the installed Sites building and hosting skills for ChatGPT Sites. Reuse the exact project_id in .openai/hosting.json; never create a duplicate Site.
-- Keep GitHub origin. Sites may supply a separate source repository and temporary credential; use per-command authentication, never store credentials in files, remotes, or Git configuration.
-- A local edit or request to review changes does not authorize a public release or DNS change. When Chadwick requests publishing, verify the intended host and audience and report the verified live URL.
-- Domain registration remains at Namecheap. Preserve email and unrelated DNS records during any explicitly requested hosting cutover.
+- Next.js App Router, React, strict TypeScript, Tailwind, Motion, and selected React Aria controls. Node 24; exact dependencies in package-lock.json.
+- Edit src/app for routes, src/features for interactions, src/components for shared presentation, src/content for typed public content, and public for curated assets.
+- Keep public pages prerendered; use narrow client components for interaction. No Convex, authentication, billing, analytics, model API, or map service is configured initially.
+- Reuse selected Videoath presentation patterns without importing its providers, live backend, credentials, or learner data.
+- Preserve original character bytes. docs/ASSETS.md records provenance and provisional selection. Do not publish the full archive.
+- legacy/sites-v1 preserves the former implementation; it is not part of the active app or Vercel upload. .openai/hosting.json identifies the existing Sites deployment for recovery, not the new deployment target.
+
+## Verification
+
+Use Node 24. Run npm ci, npm run check, npm run build, and npm test. Playwright needs a Chromium installation. Inspect the actual local page and meaningful interactions on desktop and a narrow viewport before calling it ready. Development runs at http://127.0.0.1:4327. Tests use a separate production server at port 4328.
+
+## Identity and release
+
+- Personal repository-local identity: Chadwick Poon <chadwickpoon@gmail.com>, user.useConfigOnly=true. Preserve global Alan identity.
+- Before committing/pushing, verify origin is chadwickpoon/chadwickpoon.github.io, gh api user is chadwickpoon, and outgoing author/committer emails contain no employer identity.
+- Selected infrastructure: a separate personal-site project on Vercel Hobby. Chadwick explicitly requires free, non-commercial use; do not upgrade or add paid services.
+- Ordinary pushes must not update the main website. Git deployments are disabled in vercel.json; review deployments are explicit. Production/custom-domain publication requires Chadwick’s request.
+- Namecheap remains the registrar. Keep chadwickpoon.com canonical and preserve www path/query redirects. Do not change live DNS as part of scaffolding or local review.
+- Keep SITE_INDEXING_ENABLED=false for this scaffold. Enable indexing only for an approved public release.
+- Follow docs/DEPLOYMENT.md. Check exact project/team and release result; never deploy this app into Videoath’s project or change Videoath’s infrastructure.

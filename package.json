@@ -1,11 +1,38 @@
 {
   "name": "chadwickpoon-website",
+  "version": "2.0.0",
   "private": true,
-  "version": "1.0.0",
   "type": "module",
+  "engines": {
+    "node": "24.x"
+  },
   "scripts": {
-    "build": "node scripts/build.mjs",
-    "dev": "node scripts/dev.mjs",
-    "check": "node --check script.js && node --check hosting/worker.mjs"
+    "dev": "next dev --hostname 127.0.0.1 --port 4327",
+    "build": "next build",
+    "start": "next start --hostname 127.0.0.1",
+    "lint": "eslint .",
+    "typecheck": "next typegen && tsc --noEmit",
+    "test": "playwright test",
+    "check": "npm run lint && npm run typecheck",
+    "verify": "npm run check && npm run build && npm test"
+  },
+  "dependencies": {
+    "next": "16.3.5",
+    "react": "19.2.8",
+    "react-dom": "19.2.8",
+    "motion": "12.43.0",
+    "react-aria-components": "1.20.0"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "4.3.3",
+    "tailwindcss": "4.3.3",
+    "postcss": "8.5.25",
+    "typescript": "5.9.3",
+    "@types/node": "24.13.3",
+    "@types/react": "19.2.2",
+    "@types/react-dom": "19.2.2",
+    "eslint": "9.39.5",
+    "eslint-config-next": "16.3.5",
+    "@playwright/test": "1.63.0"
   }
 }

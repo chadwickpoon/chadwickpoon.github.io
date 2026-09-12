@@ -1,0 +1,16 @@
+legacy
+docs
+tests
+test-results
+playwright-report
+.cache
+.openai
+AGENTS.md
+.github
+
+dist
+*.tsbuildinfo
+playwright.config.ts
+CNAME
+.env*
+README.md

@@ -1,17 +1,47 @@
-# Chadwick Poon website
+# Chadwick Poon’s personal site
 
-Personal website for chadwickpoon.com, imported from chadwickpoon/chadwickpoon.github.io.
+A playful, non-commercial personal website: a character welcome, an explorable project gallery, and directly linkable stories. Built with the same frontend foundation as Videoath, simplified for this project.
 
-## Work in Codex
+## Run locally
 
-Add this folder as a Codex project and start a task describing the content or design changes you want. The editable source is index.html, style.css, and script.js. Career text and externally hosted images are inherited from the existing site and may need updating.
+Use Node 24 (see .nvmrc), then:
 
-## Preview
+```sh
+npm ci
+npm run dev
+```
 
-Run npm run check, then npm run build. Run npm run dev to open the website at http://127.0.0.1:4317. No package installation is required.
+Open http://127.0.0.1:4327. No service credentials are required.
 
-## Hosting
+## Verify
 
-ChatGPT Sites uses .openai/hosting.json and the dist/server/index.js output created by npm run build. The dependency-free Worker embeds the public assets and permanently redirects www.chadwickpoon.com to https://chadwickpoon.com while preserving the path and query. The page also declares this canonical URL. Ask Codex to publish the approved website using the Sites hosting workflow.
+```sh
+npm run check
+npm run build
+npx playwright install chromium
+npm test
+```
 
-The original GitHub repository remains the origin remote. GitHub Pages is configured to publish its master branch. Namecheap DNS now routes both the main domain and www to ChatGPT Sites; GitHub Pages is retained as the previous host. The domain registration remains at Namecheap.
+Tests cover the guided choices, gallery filtering, direct links, keyboard controls, narrow layout, metadata, missing routes, and canonical redirect. They run against a separate production server at port 4328. Set TEST_BASE_URL to verify a hosted deployment where access allows.
+
+## Project structure
+
+| Directory | Purpose |
+|---|---|
+| src/app | Pages, metadata, and future route handlers |
+| src/features/character | Local guide state, image presentation, speech bubble |
+| src/features/guide | Accessible opening choices |
+| src/features/gallery | Project grid and filters |
+| src/content | Public stories and future actual trip data |
+| public | Selected character and site assets |
+| tests | Browser-level journey and routing checks |
+| docs | Architecture, asset provenance, deployment, implementation record |
+| legacy/sites-v1 | Preserved pre-migration site, excluded from deployment |
+
+## Decisions and hosting
+
+The canonical [Personal Site project](</Users/chadwick.poon/Library/Mobile Documents/iCloud~md~obsidian/Documents/alan-skills/Knowledge Base/20 Personal/Projects/Personal Site/Personal Site.md>) lives in Obsidian. Code lives in this existing repository and Codex project.
+
+Vercel Hobby is the selected hosting destination. Namecheap retains the domain. The live domain remains on ChatGPT Sites until a separately requested cutover. Read [deployment instructions](docs/DEPLOYMENT.md), [architecture](docs/ARCHITECTURE.md), and [asset provenance](docs/ASSETS.md).
+
+This foundation has no database, login, payments, analytics, live AI calls, or external map requests. Story summaries are based on the supplied profile and project brief. Deeper case studies, a first real hiking trip, and a selected AI demo remain content work. The character is a provisional original from the user-selected collection.

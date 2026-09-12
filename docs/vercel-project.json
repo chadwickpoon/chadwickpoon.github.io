@@ -1,0 +1,13 @@
+{
+  "projectId": "prj_Jzsu0sdAhwMEyAlh8gl1YhJOLvdX",
+  "orgId": "team_Q6wqr96efVViMyF4FVYLJv2H",
+  "projectName": "chadwickpoon-personal-site",
+  "plan": "hobby",
+  "framework": "nextjs",
+  "nodeVersion": "24.x",
+  "autoAssignCustomDomains": false,
+  "ssoProtection": {
+    "deploymentType": "prod_deployment_urls_and_all_previews"
+  },
+  "gitLinked": false
+}

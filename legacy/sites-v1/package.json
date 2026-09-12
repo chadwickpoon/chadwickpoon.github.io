@@ -1,0 +1,11 @@
+{
+  "name": "chadwickpoon-website",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "dev": "node scripts/dev.mjs",
+    "check": "node --check script.js && node --check hosting/worker.mjs"
+  }
+}
