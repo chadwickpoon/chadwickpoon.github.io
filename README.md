@@ -12,6 +12,6 @@ Run npm run check, then npm run build. Run npm run dev to open the website at ht
 
 ## Hosting
 
-ChatGPT Sites uses .openai/hosting.json and the dist/ output created by npm run build. Ask Codex to publish the approved website using the Sites hosting workflow.
+ChatGPT Sites uses .openai/hosting.json and the dist/server/index.js output created by npm run build. The dependency-free Worker embeds the public assets and permanently redirects www.chadwickpoon.com to https://chadwickpoon.com while preserving the path and query. The page also declares this canonical URL. Ask Codex to publish the approved website using the Sites hosting workflow.
 
-The original GitHub repository remains the origin remote. GitHub Pages is configured to publish its master branch. Keep the current live site in place until the replacement is verified and the domain cutover is complete. The domain registration remains at Namecheap.
+The original GitHub repository remains the origin remote. GitHub Pages is configured to publish its master branch. Namecheap DNS now routes both the main domain and www to ChatGPT Sites; GitHub Pages is retained as the previous host. The domain registration remains at Namecheap.
