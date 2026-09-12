@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { notFound, redirect } from "next/navigation";
 import { experiences, getExperience, experiencePath } from "@/content/experiences";
 import { StoryPage } from "@/components/StoryPage";
+import { VideoathStory } from "@/features/videoath/VideoathStory";
 
 export function generateStaticParams() { return experiences.map(({ slug }) => ({ slug })); }
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
@@ -14,5 +15,5 @@ export default async function ExperiencePage({ params }: { params: Promise<{ slu
   const experience = getExperience(slug);
   if (!experience) notFound();
   if (slug === "trails") redirect("/trails");
-  return <StoryPage experience={experience} />;
+  return slug === "videoath" ? <VideoathStory /> : <StoryPage experience={experience} />;
 }

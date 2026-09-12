@@ -25,6 +25,7 @@ export function WelcomeGuide() {
   return <section className="welcome" aria-label="Choose your starting point">
     <div className="guide-greeting"><CharacterCompanion /><CharacterMessage message={state.message} /></div>
     <div className="guide-choices">
+      <p className="guide-hint">Choose a starting point. You can wander from there.</p>
       <RadioGroup aria-label="What would you like to explore?" value={selected ?? ""} onChange={(value) => setSelected(value as Interest)} className="choice-list">
         {choices.map((choice) => <Radio key={choice.value} value={choice.value} className="choice-card">
           <span className="choice-icon" aria-hidden="true">{choice.icon}</span><span>{choice.label}</span><span className="choice-indicator" aria-hidden="true" />

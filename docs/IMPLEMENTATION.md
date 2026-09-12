@@ -32,3 +32,7 @@ The separate Vercel project is recorded in vercel-project.json. Its verified pla
 ## Next content/design work
 
 Choose the final character; refine the opening and each panel’s visual direction; expand the first substantive case study with attributable decisions/outcomes; supply one actual hiking trip and photographs; choose a bounded AI demo if desired. These are next experiences to build on the completed foundation, not hidden scaffold dependencies.
+
+## Later welcome and experience milestone
+
+The astronaut and original foundation-only state above are historical. See [Welcome and First Experience](WELCOME-EXPERIENCE.md) for the refined welcome/gallery, CP placeholder, and completed illustrative Videoath walkthrough.

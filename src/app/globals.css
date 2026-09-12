@@ -37,9 +37,7 @@ h1,h2,h3,p { margin:0; }
 .welcome { margin:42px auto 72px; max-width:735px; display:grid; grid-template-columns:1fr 1.25fr; gap:32px; align-items:center; }
 .guide-greeting { display:flex; flex-direction:column; align-items:center; gap:16px; }
 .companion { width:122px; height:122px; flex-shrink:0; }
-.companion img { display:block; width:100%; height:100%; object-fit:contain; }
 .companion-small { width:96px; height:96px; }
-.character-fallback { display:flex; align-items:center; justify-content:center; width:100%; height:100%; border-radius:50%; background:#e2e6fb; font-weight:800; font-size:30px; }
 .speech-bubble { position:relative; border:1.5px solid #d1cbbd; background:#fffefa; border-radius:14px; padding:14px 18px; min-height:76px; display:flex; align-items:center; text-align:center; font-size:16px; line-height:1.5; font-weight:600; max-width:285px; }
 .speech-bubble:before { content:""; position:absolute; top:-8px; left:calc(50% - 8px); width:14px; height:14px; border-top:1.5px solid #d1cbbd; border-left:1.5px solid #d1cbbd; background:#fffefa; transform:rotate(45deg); }
 .choice-list { display:flex; flex-direction:column; gap:9px; }
@@ -112,11 +110,6 @@ h1,h2,h3,p { margin:0; }
 .habit-flower { position:absolute; top:23px; left:calc(50% - 113px); font-size:63px; color:#b082bf; }
 .card-dota { background:#e5e7eb; border-color:#a5adb8; }
 .art-dota { background:#273544; }
-.game-board { position:absolute; display:grid; grid-template-columns:repeat(3,1fr); gap:5px; width:190px; height:190px; left:calc(50% - 95px); top:13px; transform:rotate(-20deg) skew(8deg); opacity:.35; }
-.game-board span { border:1px solid #94acb0; border-radius:8px; background:#385565; }
-.game-token { position:absolute; display:flex; align-items:center; justify-content:center; width:85px; height:95px; border-radius:15px; border:2px solid #d19b6a; background:#ddbc94; color:#493931; font-size:61px; box-shadow:5px 6px 0 #111d29; }
-.token-one { top:40px; left:calc(50% - 99px); transform:rotate(-12deg); }
-.token-two { top:78px; left:calc(50% + 19px); transform:rotate(11deg); color:#263b4a; background:#afc7c9; border-color:#92b4be; }
 .game-label { position:absolute; top:187px; left:0; width:100%; text-align:center; color:#a7b8c3; font-size:8px; letter-spacing:3px; }
 .card-trails { background:#e9eedf; border-color:#a7b89d; }
 .art-trails { background:#dce9d9; }
@@ -207,4 +200,190 @@ h1,h2,h3,p { margin:0; }
   html { scroll-behavior:auto; }
   *,*::before,*::after { animation-duration:.01ms!important; animation-iteration-count:1!important; transition-duration:.01ms!important; }
   .experience-card:hover,.experience-card:nth-child(even):hover { transform:none; }
+}
+/* The gallery stays close to the greeting; the guide identity is deliberately typographic. */
+.site-header { height:88px; }
+.intro { padding-top:42px; }
+.intro h1 { font-size:clamp(34px,4.2vw,50px); }
+.intro-copy { margin-top:18px; }
+.welcome { max-width:870px; grid-template-columns:.9fr 1.2fr; gap:42px; margin:32px auto 46px; }
+.guide-greeting { flex-direction:row; gap:17px; }
+.companion { width:78px; height:78px; }
+.companion-small { width:88px; height:88px; }
+.guide-initials { display:flex; align-items:center; justify-content:center; width:100%; height:100%; border-radius:24px; background:#f7e3ae; border:1px solid #d7ba7b; font-size:42px; font-weight:750; letter-spacing:-4px; padding:0 7px 7px 0; transform:rotate(-6deg); box-shadow:3px 4px 0 #e4d2a8; }
+.guide-initials>span { color:#9a6424; }
+.speech-bubble { max-width:225px; text-align:left; font-size:15px; }
+.speech-bubble:before { top:calc(50% - 7px); left:-8px; transform:rotate(-45deg); }
+.guide-hint { font-size:11px; color:var(--muted); margin:0 0 10px 2px; }
+.choice-card { padding:11px 14px; }
+.choice-card:active { transform:translateY(1px); }
+.gallery-section { padding-top:28px; }
+.filter-button { min-height:42px; }
+.experience-card { position:relative; }
+.art { height:242px; }
+.art-kicker { position:absolute; left:20px; top:17px; font-size:9px; font-weight:750; letter-spacing:1.6px; }
+.art-videoath .art-kicker { color:#725521; }
+.art-boardy .art-kicker { color:#385e44; }
+.art-alan .art-kicker { color:#82594c; }
+.art-fabulous .art-kicker { color:#6b5287; }
+.art-dota .art-kicker { color:#e1d3bc; }
+.art-trails .art-kicker { color:#315b3c; }
+.art-trails .trail-label { display:none; }
+.card-caption { align-items:flex-end; }
+.card-caption p { line-height:1.55; font-size:13px; }
+.card-caption h3 { font-size:28px; }
+.card-action { display:block; color:#6f6451; margin-bottom:7px; font-size:9px; font-weight:700; letter-spacing:1.1px; text-transform:uppercase; }
+.card-arrow { background:#ffffff75; }
+.practice-card { top:61px; transition:transform .25s; }
+.floating-star { top:51px; transition:transform .25s; }
+.experience-card:is(:hover,:focus-visible) .practice-card { transform:rotate(-2deg) translateY(-3px); }
+.experience-card:is(:hover,:focus-visible) .floating-star { transform:rotate(35deg); }
+.connection-node,.step,.care-note { transition:transform .25s; }
+.experience-card:is(:hover,:focus-visible) .node-two { transform:rotate(-3deg) translateY(-3px); }
+.experience-card:is(:hover,:focus-visible) .step-three { transform:translateY(-5px); }
+.experience-card:is(:hover,:focus-visible) .care-note { transform:rotate(3deg); }
+.art-dota { background:#24392f; }
+.strategy-map { width:190px; height:190px; position:absolute; inset:36px auto auto calc(50% - 95px); transform:rotate(-8deg); border:1px solid #71806c; border-radius:13px; background:#344b3d; box-shadow:7px 8px 0 #192a23; }
+.strategy-map svg { width:100%; height:100%; }
+.strategy-map path { fill:none; stroke-linecap:round; }
+.map-river { stroke:#8bb6ac; stroke-width:12; opacity:.5; }
+.map-lane { stroke:#aaa085; stroke-width:2; stroke-dasharray:3 5; }
+.strategy-token { position:absolute; height:32px; width:32px; display:grid; place-items:center; border-radius:50%; background:#dec795; color:#2e392c; border:2px solid #f2deb2; box-shadow:2px 3px 0 #142c22; font-size:17px; transition:transform .25s; }
+.strategy-one { left:28px; bottom:32px; }
+.strategy-two { right:25px; top:30px; background:#bb735a; border-color:#d99f78; }
+.experience-card:is(:hover,:focus-visible) .strategy-one { transform:translate(14px,-13px); }
+.game-label { top:auto; bottom:11px; color:#d3dcc8; font-size:8px; }
+.secondary { border-color:#c1baaa; background:#fffdf7; color:#3d392f; }
+.secondary:hover { background:#f4efdf; }
+.text-link { font-size:14px; font-weight:650; display:inline-flex; gap:16px; align-items:center; padding-block:10px; text-decoration:underline; text-underline-offset:5px; }
+.videoath-story { margin:35px auto 65px; }
+.videoath-hero { display:grid; grid-template-columns:1.15fr 1fr; gap:40px; align-items:center; margin-top:28px; }
+.videoath-hero h1 { margin-top:17px; font-size:clamp(32px,4vw,46px); font-weight:750; letter-spacing:-1.6px; line-height:1.1; }
+.videoath-hero h1>span { display:block; margin-top:14px; font-weight:550; color:#8d6c2d; font-size:clamp(34px,4.9vw,56px); letter-spacing:-2px; }
+.videoath-deck { margin-top:22px; max-width:430px; font-size:17px; color:#686155; line-height:1.75; }
+.videoath-hero .role-label { margin-top:18px; font-size:12px; }
+.practice-loop-art { position:relative; height:320px; overflow:hidden; border-radius:26px; background:#f5dda2; }
+.loop-orbit { width:240px; height:240px; position:absolute; top:40px; left:calc(50% - 120px); border:2px dashed #bb954b; border-radius:50%; transform:rotate(-15deg); }
+.loop-note { position:absolute; width:145px; height:158px; padding:22px; background:#fffaf0; border:1.5px solid #6e5936; border-radius:14px; font-size:14px; box-shadow:5px 6px 0 #cba966; }
+.loop-note strong { font-family:Georgia,serif; font-size:32px; font-weight:400; }
+.loop-note i { display:block; font-size:36px; font-style:normal; }
+.loop-try { left:calc(50% - 149px); top:48px; transform:rotate(-12deg); }
+.loop-reflect { right:calc(50% - 149px); top:109px; transform:rotate(9deg); background:#e9eed7; }
+.loop-spark { position:absolute; right:calc(50% - 127px); top:32px; font-size:44px; color:#856323; }
+.loop-label { position:absolute; width:100%; bottom:18px; text-align:center; font-size:8px; font-weight:750; letter-spacing:2.5px; }
+.story-jump { display:flex; align-items:center; gap:28px; margin:30px 0 45px; }
+.practice-experience { border:1px solid #c7b382; background:#f7e9c4; border-radius:22px; padding:25px; scroll-margin-top:24px; }
+.practice-toolbar { display:flex; justify-content:space-between; align-items:center; gap:16px; font-size:11px; color:#736344; }
+.demo-label { font-size:10px; font-weight:750; letter-spacing:1.5px; display:flex; gap:8px; align-items:center; }
+.demo-label>span { color:#b16629; font-size:12px; }
+.practice-steps { padding:0; margin:26px auto; display:flex; list-style:none; max-width:620px; }
+.practice-steps li { flex:1; position:relative; }
+.practice-steps li:not(:last-child):after { content:""; position:absolute; top:21px; width:calc(100% - 48px); left:calc(50% + 24px); border-top:2px dashed #ccba91; }
+.practice-steps button { display:flex; align-items:center; flex-direction:column; gap:8px; margin:auto; border:0; background:none; font-size:11px; font-weight:650; color:#655a44; min-width:80px; }
+.step-number { display:grid; place-items:center; width:43px; height:43px; border:1px solid #bdab83; border-bottom-width:3px; background:#f9f2df; border-radius:50%; font-size:16px; }
+.practice-steps button[aria-current="step"] .step-number { background:#f3bb51; border-color:#a87929; color:#3b2e19; }
+.practice-steps button:disabled { color:#8c8067; cursor:default; }
+.practice-panel { background:#fffefa; border:1px solid #d3c5a4; border-radius:16px; padding:34px 38px 27px; }
+.practice-panel-heading h2 { font-size:clamp(24px,3vw,32px); font-weight:700; letter-spacing:-.9px; margin-top:8px; line-height:1.25; }
+.scenario-text { margin:19px 0 23px; font-size:16px; line-height:1.75; color:#686050; max-width:740px; }
+.practice-options { display:grid; gap:10px; margin-top:23px; }
+.practice-option { display:flex; align-items:center; gap:15px; padding:15px 18px; border:1.5px solid #d9d2c1; border-bottom-width:3px; border-radius:11px; background:#fffdfa; font-size:14px; font-weight:600; cursor:pointer; min-height:63px; }
+.practice-option:hover { background:#fbf5e6; }
+.practice-option[data-selected] { background:#fff1ca; border-color:#b48328; }
+.practice-option[data-selected] .choice-indicator { border:5px solid #997122; }
+.practice-option[data-focus-visible] { outline:3px solid #317865; outline-offset:3px; }
+.practice-option .choice-indicator { flex-shrink:0; }
+.option-letter { width:28px; height:28px; flex-shrink:0; display:grid; place-items:center; border:1px solid #dad2bd; border-radius:6px; font-size:11px; color:#7a6c50; }
+.practice-panel-footer { margin-top:28px; padding-top:22px; border-top:1px solid #e4ded0; display:flex; align-items:center; justify-content:space-between; gap:22px; }
+.practice-panel-footer>span { font-size:12px; color:#7a715f; max-width:260px; line-height:1.7; }
+.sample-response { margin:23px 0 0; background:#f4f2e9; border-radius:10px; padding:23px; }
+.sample-response .eyebrow { font-size:9px; }
+.sample-response p { margin-top:12px; font-family:Georgia,serif; font-size:21px; line-height:1.7; color:#4d473b; }
+.feedback-grid { display:grid; grid-template-columns:1fr 1.2fr; gap:18px; margin-top:20px; }
+.feedback-note { border-radius:11px; padding:21px; border:1px solid; }
+.feedback-note.strength { background:#f0f4e7; border-color:#cbd6b7; }
+.feedback-note.opportunity { background:#fff5db; border-color:#e2cc95; }
+.feedback-symbol { font-size:22px; }
+.feedback-note h3 { margin:9px 0; font-size:14px; font-weight:750; }
+.feedback-note p { font-size:14px; color:#686052; line-height:1.75; }
+.next-step-options { grid-template-columns:1fr 1fr; }
+.next-step-options .practice-option { padding-inline:15px; }
+.practice-result { margin-top:20px; }
+.practice-takeaway { display:flex; align-items:flex-start; gap:13px; font-size:14px; line-height:1.75; color:#4b6441; padding:21px 5px 0; }
+.practice-takeaway>span { font-size:24px; line-height:1.2; }
+.next-step-hint { padding:25px; border:1px dashed #d3c7ae; border-radius:10px; color:#7c725e; font-size:13px; line-height:1.7; }
+.demo-footnote { font-size:11px; line-height:1.8; color:#716247; max-width:660px; text-align:center; margin:20px auto 0; }
+.demo-footnote a { text-decoration:underline; text-underline-offset:3px; }
+.builder-notes { display:grid; grid-template-columns:1fr 1.3fr; gap:65px; margin:65px 0; padding:0 20px; }
+.builder-notes h2 { font-size:36px; letter-spacing:-1.1px; font-weight:600; line-height:1.25; margin-top:17px; }
+.builder-notes h2 span { color:#8c7f67; }
+.builder-copy { font-size:16px; color:#686155; line-height:1.85; }
+.builder-copy p+p { margin-top:18px; }
+.builder-copy .text-link { margin-top:15px; color:#433b2f; }
+.next-world { display:flex; align-items:center; justify-content:space-between; gap:30px; padding:34px; border-radius:18px; background:#e8eddf; border:1px solid #bfc9b2; }
+.next-world h2 { margin-top:10px; font-size:26px; font-weight:600; letter-spacing:-.5px; }
+.next-world p:not(.eyebrow) { margin-top:10px; color:#657157; font-size:14px; line-height:1.7; }
+@media(max-width:720px) {
+  .site-header { height:77px; }
+  .intro { padding-top:30px; }
+  .intro h1 { font-size:34px; }
+  .welcome { margin:26px auto 35px; }
+  .guide-greeting { margin-bottom:20px; }
+  .companion { width:66px; height:66px; }
+  .guide-initials { font-size:36px; border-radius:21px; }
+  .speech-bubble { font-size:14px; max-width:241px; min-height:66px; }
+  .guide-hint { display:none; }
+  .choice-card { padding:12px 14px; }
+  .art { height:232px; }
+  .filter-row { gap:2px; }
+  .card-caption h3 { font-size:26px; }
+  .card-caption p { font-size:12px; }
+  .videoath-story { margin-top:22px; }
+  .videoath-hero { grid-template-columns:1fr; gap:25px; margin-top:24px; }
+  .videoath-hero .eyebrow { font-size:9px; letter-spacing:1.4px; }
+  .videoath-hero h1 { font-size:35px; }
+  .videoath-hero h1>span { font-size:43px; letter-spacing:-1.4px; }
+  .videoath-deck { font-size:16px; }
+  .practice-loop-art { height:245px; }
+  .loop-orbit { width:210px; height:210px; top:15px; left:calc(50% - 105px); }
+  .loop-note { width:130px; height:145px; padding:18px; }
+  .loop-try { top:27px; left:calc(50% - 127px); }
+  .loop-reflect { top:63px; right:calc(50% - 127px); }
+  .loop-spark { font-size:34px; top:14px; right:calc(50% - 120px); }
+  .story-jump { gap:19px; margin:25px 0 33px; }
+  .story-jump .button { padding-inline:13px; font-size:12px; }
+  .story-jump .text-link { font-size:12px; gap:5px; }
+  .practice-experience { padding:17px 12px; border-radius:17px; }
+  .practice-toolbar { display:block; padding-left:6px; }
+  .practice-toolbar>span+span { display:block; margin-top:8px; font-size:10px; }
+  .practice-steps { margin:22px 0; }
+  .practice-panel { padding:23px 16px 20px; }
+  .practice-panel-heading .eyebrow { font-size:9px; }
+  .practice-panel-heading h2 { font-size:26px; }
+  .scenario-text { font-size:14px; line-height:1.8; }
+  .practice-option { padding:13px 11px; font-size:13px; gap:10px; min-height:67px; }
+  .option-letter { width:23px; height:25px; }
+  .practice-panel-footer { flex-wrap:wrap; gap:15px; margin-top:23px; padding-top:18px; }
+  .practice-panel-footer>span { max-width:none; }
+  .practice-panel-footer .button { width:100%; }
+  .practice-panel-footer .text-button { padding-block:6px; font-size:12px; }
+  .sample-response { padding:18px; }
+  .sample-response p { font-size:19px; }
+  .feedback-grid,.next-step-options { grid-template-columns:1fr; }
+  .feedback-note { padding:18px; }
+  .practice-takeaway { font-size:13px; }
+  .demo-footnote { padding:0 8px; font-size:10px; }
+  .builder-notes { grid-template-columns:1fr; gap:25px; margin:42px 0; padding:0 6px; }
+  .builder-notes h2 { font-size:32px; }
+  .builder-copy { font-size:15px; }
+  .next-world { display:block; padding:26px; }
+  .next-world h2 { font-size:25px; }
+  .next-world .button { margin-top:23px; }
+}
+@media(prefers-reduced-motion:reduce) {
+  .experience-card:is(:hover,:focus-visible) .practice-card { transform:rotate(-7deg); }
+  .experience-card:is(:hover,:focus-visible) .floating-star { transform:rotate(15deg); }
+  .experience-card:is(:hover,:focus-visible) .node-two { transform:rotate(5deg); }
+  .experience-card:is(:hover,:focus-visible) .care-note { transform:rotate(9deg); }
+  .experience-card:is(:hover,:focus-visible) .step-three,.experience-card:is(:hover,:focus-visible) .strategy-one { transform:none; }
 }

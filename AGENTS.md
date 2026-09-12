@@ -4,7 +4,7 @@ This is a personal, non-commercial portfolio. Use only public or user-approved b
 
 ## Product direction
 
-Read the canonical [Personal Site brief](</Users/chadwick.poon/Library/Mobile Documents/iCloud~md~obsidian/Documents/alan-skills/Knowledge Base/20 Personal/Projects/Personal Site/Personal Site.md>) and decision record before design/content work. The selected direction combines Neal.fun’s thumbnail gallery, a Duolingo-inspired welcome, and selected original Videoath character assets. Exact character and deeper experience designs remain reviewable.
+Read the canonical [Personal Site brief](</Users/chadwick.poon/Library/Mobile Documents/iCloud~md~obsidian/Documents/alan-skills/Knowledge Base/20 Personal/Projects/Personal Site/Personal Site.md>) and decision record before design/content work. The selected direction combines Neal.fun’s thumbnail gallery and a Duolingo-inspired optional welcome. The astronaut was rejected; Untitled UI logo integration and final selection are deferred. Use the current typographic CP placeholder until Chadwick selects a logo. Videoath is the first detailed interactive experience, with original written examples rather than a live assessment.
 
 ## Architecture
 

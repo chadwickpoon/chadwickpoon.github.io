@@ -18,7 +18,7 @@ export const experiences: readonly Experience[] = [
   {
     slug: "videoath", title: "Videoath", subtitle: "Building a place to practise.", category: "work", eyebrow: "Independent building · Education", role: "Founder & product builder",
     introduction: "My independent work brings together healthcare interview preparation, product design, and AI.",
-    paragraphs: ["Videoath is a place for healthcare applicants to practise interviews. It brings together the things I enjoy working on: learning experiences, useful feedback, and the details that make a product feel approachable.", "This is where I spend time across product, architecture, and growth. The character guiding you around this site comes from the same collection I use in Videoath."],
+    paragraphs: ["Videoath is a place for healthcare applicants to practise interviews. It brings together the things I enjoy working on: learning experiences, useful feedback, and the details that make a product feel approachable.", "This is where I spend time across product, architecture, and growth. Explore a small practice walkthrough, then visit the full product."],
     link: { label: "Visit Videoath", url: "https://www.videoath.com" },
   },
   {

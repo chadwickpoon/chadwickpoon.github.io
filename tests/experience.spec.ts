@@ -12,7 +12,7 @@ test("guide filters the gallery and opens a real story", async ({ page }) => {
   await expect(page.getByRole("heading", { name: "A few worlds to explore." })).toBeFocused();
   await page.locator(".experience-card").filter({ hasText: "Videoath" }).click();
   await expect(page).toHaveURL(/\/explore\/videoath$/);
-  await expect(page.getByRole("heading", { level: 1 })).toHaveText("Videoath");
+  await expect(page.getByRole("heading", { level: 1 })).toContainText("Videoath");
   await page.reload();
   await expect(page.getByRole("link", { name: "Visit Videoath" })).toBeVisible();
   await page.goBack();
@@ -43,9 +43,8 @@ test("keyboard choices and reduced motion work without overflow", async ({ page 
   await page.getByRole("button", { name: "Let’s explore" }).click();
   await expect(page.locator(".experience-card")).toHaveCount(2);
   expect(await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth)).toBe(true);
-  const asset = page.locator(".companion img");
-  await expect(asset).toBeVisible();
-  expect(await asset.evaluate((image: HTMLImageElement) => image.complete && image.naturalWidth > 0)).toBe(true);
+  await expect(page.getByLabel("Chadwick Poon", { exact: true })).toBeVisible();
+  await expect(page.locator(".companion img")).toHaveCount(0);
 });
 
 test("public routes, metadata, and missing routes have correct responses", async ({ request }) => {
