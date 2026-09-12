@@ -1,34 +1,35 @@
 {
-  "id": "dpl_GNP9JGbM7RignYMTXazaCVeLLDsX",
+  "id": "dpl_8E41BMVnwPdbUyj6n6azMsvXomJ5",
   "name": "chadwickpoon-personal-site",
-  "url": "chadwickpoon-personal-site-dgiiopc9x.vercel.app",
+  "url": "chadwickpoon-personal-site-nd9ddc01c.vercel.app",
   "readyState": "READY",
   "target": "production",
-  "createdAt": 1789245304054,
-  "ready": 1789245356702,
+  "createdAt": 1789247907148,
+  "ready": 1789247942963,
   "alias": [
     "chadwickpoon-personal-site-cpoon166-gmailcoms-projects.vercel.app"
   ],
-  "meta": {
-    "githubCommitAuthorName": "Chadwick Poon",
-    "githubCommitAuthorEmail": "chadwickpoon@gmail.com",
-    "githubCommitMessage": "Build personal-site foundation with Next.js and Vercel Hobby",
-    "githubCommitOrg": "chadwickpoon",
-    "githubCommitRef": "codex/personal-site-foundation",
-    "githubCommitRepo": "chadwickpoon.github.io",
-    "githubCommitSha": "ec08c41c2db19cf2037007597a9a557d0ac75591",
-    "githubDeployment": "1",
-    "githubOrg": "chadwickpoon",
-    "githubRepo": "chadwickpoon.github.io",
-    "gitRootDirectory": "",
-    "actor": "codex",
-    "lambdaRuntimeStats": "{\"nodejs\":2}",
-    "bundler": "turbopack"
-  },
+  "sourceCommit": "1163ff8ef932a342c21915ac53f0f912bbe21498",
+  "sourceBranch": "codex/personal-site-foundation",
   "projectId": "prj_Jzsu0sdAhwMEyAlh8gl1YhJOLvdX",
+  "teamId": "team_Q6wqr96efVViMyF4FVYLJv2H",
   "plan": "hobby",
   "autoAssignCustomDomains": false,
+  "gitLinked": false,
   "domains": [
     "chadwickpoon-personal-site.vercel.app"
-  ]
+  ],
+  "verifiedAt": "2026-09-12T21:20:39.485Z",
+  "verification": {
+    "localChecks": 16,
+    "hostedPassed": 14,
+    "hostedSkipped": 2,
+    "skipReason": "Custom Host redirect checked locally; domain cutover not part of this release.",
+    "visual": [
+      "desktop welcome and gallery",
+      "390px mobile welcome",
+      "desktop and mobile walkthrough choices, feedback, follow-through, back, restart",
+      "hosted welcome and story"
+    ]
+  }
 }

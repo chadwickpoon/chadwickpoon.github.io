@@ -27,7 +27,7 @@ The separate Vercel project is recorded in vercel-project.json. Its verified pla
 - Vercel labels this first bootstrap deployment Production. Neither `chadwickpoon.com` nor `www.chadwickpoon.com` is attached to the new project; automatic custom-domain assignment remains disabled. No DNS cutover occurred.
 - Hosted acceptance: 8 checks passed on desktop/mobile. The two custom-Host redirect checks are intentionally local-only and passed in the 10-check local run. They require verification again on the real domain at cutover.
 - Hosted homepage visually inspected in the in-app browser; character and choice controls render correctly.
-- Provider receipt: `docs/deployment-receipt.json`. It records source commit, deployment status, aliases, plan, and project controls without credentials.
+- Foundation provider receipt: `docs/receipts/2026-09-12-foundation.json`. It records source commit, deployment status, aliases, plan, and project controls without credentials.
 
 ## Next content/design work
 

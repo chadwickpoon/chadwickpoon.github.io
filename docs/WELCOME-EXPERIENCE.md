@@ -18,4 +18,16 @@ The other five gallery entries remain concise chapters or collection introductio
 
 ## Hosting
 
-Use the existing personal-site Vercel Hobby project and generated review address. Search indexing stays disabled. No custom-domain change, paid service, backend, or live AI provider is part of this milestone. A final deployment receipt will record the verified source and hosted result.
+Use the existing personal-site Vercel Hobby project and generated review address. Search indexing stays disabled. No custom-domain change, paid service, backend, or live AI provider is part of this milestone. The verified source and hosted result are recorded below.
+
+## Verified hosted review
+
+[Open the updated site](https://chadwickpoon-personal-site-cpoon166-gmailcoms-projects.vercel.app/) · [Try the Videoath experience](https://chadwickpoon-personal-site-cpoon166-gmailcoms-projects.vercel.app/explore/videoath)
+
+- Source: `1163ff8ef932a342c21915ac53f0f912bbe21498`, personal GitHub branch `codex/personal-site-foundation`.
+- Deployment: `dpl_8E41BMVnwPdbUyj6n6azMsvXomJ5`, verified READY.
+- Project: `prj_Jzsu0sdAhwMEyAlh8gl1YhJOLvdX`, Vercel Hobby, Node 24, Next.js.
+- All 14 applicable hosted desktop/mobile checks passed; the two custom-Host redirect checks passed locally and are intentionally skipped against the generated Vercel address.
+- Hosted welcome and Videoath story visually verified. The review alias is public and indexing remains disabled.
+- No custom domain is attached to the project. Automatic custom-domain assignment remains disabled; Git deployments remain disconnected. No Namecheap/DNS change or paid service was introduced.
+- The repository preserves the provider receipt at `docs/deployment-receipt.json` and the original foundation receipt at `docs/receipts/2026-09-12-foundation.json`.
