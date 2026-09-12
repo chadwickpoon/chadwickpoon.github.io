@@ -1,0 +1,34 @@
+{
+  "id": "dpl_GNP9JGbM7RignYMTXazaCVeLLDsX",
+  "name": "chadwickpoon-personal-site",
+  "url": "chadwickpoon-personal-site-dgiiopc9x.vercel.app",
+  "readyState": "READY",
+  "target": "production",
+  "createdAt": 1789245304054,
+  "ready": 1789245356702,
+  "alias": [
+    "chadwickpoon-personal-site-cpoon166-gmailcoms-projects.vercel.app"
+  ],
+  "meta": {
+    "githubCommitAuthorName": "Chadwick Poon",
+    "githubCommitAuthorEmail": "chadwickpoon@gmail.com",
+    "githubCommitMessage": "Build personal-site foundation with Next.js and Vercel Hobby",
+    "githubCommitOrg": "chadwickpoon",
+    "githubCommitRef": "codex/personal-site-foundation",
+    "githubCommitRepo": "chadwickpoon.github.io",
+    "githubCommitSha": "ec08c41c2db19cf2037007597a9a557d0ac75591",
+    "githubDeployment": "1",
+    "githubOrg": "chadwickpoon",
+    "githubRepo": "chadwickpoon.github.io",
+    "gitRootDirectory": "",
+    "actor": "codex",
+    "lambdaRuntimeStats": "{\"nodejs\":2}",
+    "bundler": "turbopack"
+  },
+  "projectId": "prj_Jzsu0sdAhwMEyAlh8gl1YhJOLvdX",
+  "plan": "hobby",
+  "autoAssignCustomDomains": false,
+  "domains": [
+    "chadwickpoon-personal-site.vercel.app"
+  ]
+}

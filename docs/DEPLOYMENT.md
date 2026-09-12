@@ -1,5 +1,7 @@
 # Deployment
 
+Current verified review: [open the site](https://chadwickpoon-personal-site-cpoon166-gmailcoms-projects.vercel.app). This is a public generated URL with indexing disabled. See [implementation checkpoint](IMPLEMENTATION.md) and [provider receipt](deployment-receipt.json) for source and acceptance evidence.
+
 ## Selected setup
 
 - Vercel Hobby only. No paid plan, add-on, model, database, analytics, or external map service is required.
