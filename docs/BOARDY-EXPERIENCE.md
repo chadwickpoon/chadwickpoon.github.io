@@ -28,10 +28,22 @@ Alex, Riley, Sam, Jordan, their circumstances, and all introductions are fiction
 
 Dependency installation from the lockfile, lint, strict type checking, and the production build passed. All 22 local desktop/mobile checks passed. The six Boardy checks cover every reason and focus, stale-state clearing, restart, disclosure controls, keyboard use, reduced motion, mobile step visibility, gallery entry, onward navigation, browser back, refresh, and the no-JavaScript fallback. The interaction checks also confirm no runtime errors or requests to outside services during the example flow.
 
-Desktop and 390px mobile visual review covered the chapter, choice cards, context step, connection result, and sample introduction. Hosted verification and the source/deployment receipt are recorded after the review deployment.
+Desktop and 390px mobile visual review covered the chapter, choice cards, context step, connection result, and sample introduction. Hosted verification and the source/deployment receipt are recorded below.
 
 ## Open content and publishing choices
 
 One specific product decision or feature Chadwick personally owned at Boardy, and any attributable outcome he wants to share, remain open. A clarification was requested while building; no unconfirmed contribution has been added. The portfolio can show the completed illustrative experience while that case-study content is developed.
 
 The other four worlds remain concise chapters or collection introductions. Actual hiking trips, personal Dota stories, deeper work outcomes, and a live AI experience require their own content and scope. The final logo and Untitled UI integration remain deferred. This update uses the existing Vercel Hobby review address with indexing disabled; it does not move the custom domain.
+
+## Verified hosted review
+
+[Open the Boardy chapter](https://chadwickpoon-personal-site-cpoon166-gmailcoms-projects.vercel.app/explore/boardy)
+
+- Source: `1c1c6c5ff7d8abfed9db90b94afc3fb426eca3f8`, personal GitHub branch `codex/personal-site-foundation`.
+- Deployment: `dpl_sZiC7UKvf9XdR29sEPAEBUYQTUxV`, verified READY and assigned to the existing generated review address.
+- Project: `prj_Jzsu0sdAhwMEyAlh8gl1YhJOLvdX`, Vercel Hobby, Next.js, Node 24.
+- All 20 applicable hosted desktop/mobile checks passed. The two custom-Host redirect checks passed locally and are intentionally skipped at the generated address.
+- The hosted chapter, context selection, connection result, and final sample introduction were visually verified. The revised introduction has one greeting, followed by the relevant context.
+- Review indexing remains disabled. No custom domain is attached; automatic custom-domain assignment stays disabled and Git deployments stay disconnected. No DNS change, paid service, or live messaging/AI integration was introduced.
+- The current provider receipt is `docs/deployment-receipt.json`; the prior welcome/Videoath receipt is preserved at `docs/receipts/2026-09-12-welcome-videoath.json`.
