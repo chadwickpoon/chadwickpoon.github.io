@@ -32,3 +32,9 @@ Serve files separately from public; the old embedded-Worker format is archived. 
 The prerendered VideoathStory page owns the introduction, public role summary, product links, and onward navigation. PracticeWalkthrough is an isolated client component with three steps and typed, original examples in src/content/videoath-walkthrough.ts. Selecting an opening changes its feedback; selecting a follow-through changes the example and takeaway. Changing the opening clears downstream state. Visitors can revisit completed steps and restart. Each step moves keyboard focus and scrolls the new content into view. Reduced motion is respected.
 
 The walkthrough sends no answers, records no audio or video, calls no model, and stores no visitor data. It is explicitly illustrative. Core portfolio pages, links, and a walkthrough fallback remain available without JavaScript.
+
+## Boardy introduction explorer
+
+BoardyStory is the second detailed prerendered story. IntroductionExplorer owns only the local three-stage interaction: reason, context, connection. Typed authored data in src/content/boardy-examples.ts supplies three reasons and two focuses per reason. A reason change clears the downstream focus and introduction disclosure; a focus change closes the old disclosure. All progression uses accessible radio groups and buttons. New steps receive focus and scroll into view with reduced-motion support.
+
+The example has no external requests, persistence, form submission, or live AI service. Real role attribution and public product links remain in the server page, separate from the fictional people and introductions. No additional dependency or backend is required.

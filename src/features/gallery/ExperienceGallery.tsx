@@ -17,7 +17,7 @@ export function ExperienceGallery({ experiences }: { experiences: readonly Exper
     <div className="experience-grid">
       {visible.map((entry) => <Link key={entry.slug} href={experiencePath(entry.slug)} className={`experience-card card-${entry.slug}`}>
         <ExperienceArtwork kind={entry.slug} />
-        <div className="card-caption"><div><span className="card-action">{entry.slug === "videoath" ? "Try the walkthrough" : entry.slug === "trails" ? "The trail notebook" : entry.slug === "dota" ? "Off the clock" : "Explore the chapter"}</span><h3>{entry.title}</h3><p>{entry.subtitle}</p></div><span className="card-arrow" aria-hidden="true">↗</span></div>
+        <div className="card-caption"><div><span className="card-action">{entry.slug === "videoath" ? "Try the walkthrough" : entry.slug === "boardy" ? "Explore an introduction" : entry.slug === "trails" ? "The trail notebook" : entry.slug === "dota" ? "Off the clock" : "Explore the chapter"}</span><h3>{entry.title}</h3><p>{entry.subtitle}</p></div><span className="card-arrow" aria-hidden="true">↗</span></div>
       </Link>)}
     </div>
   </section>;

@@ -1,6 +1,6 @@
 # Deployment
 
-Current verified review: [open the site](https://chadwickpoon-personal-site-cpoon166-gmailcoms-projects.vercel.app). This is a public generated URL with indexing disabled. See [current implementation checkpoint](WELCOME-EXPERIENCE.md) and [provider receipt](deployment-receipt.json) for source and acceptance evidence.
+Current verified review: [open the site](https://chadwickpoon-personal-site-cpoon166-gmailcoms-projects.vercel.app). This is a public generated URL with indexing disabled. See [current implementation checkpoint](BOARDY-EXPERIENCE.md) and [provider receipt](deployment-receipt.json) for source and acceptance evidence.
 
 ## Selected setup
 

@@ -32,6 +32,8 @@ Tests cover the guided choices, gallery filtering, direct links, keyboard contro
 | src/features/character | Local guide state, image presentation, speech bubble |
 | src/features/guide | Accessible opening choices |
 | src/features/gallery | Project grid and filters |
+| src/features/videoath | Illustrative practice walkthrough |
+| src/features/boardy | Guided introduction explorer |
 | src/content | Public stories and future actual trip data |
 | public | Selected character and site assets |
 | tests | Browser-level journey and routing checks |
@@ -44,4 +46,6 @@ The canonical [Personal Site project](</Users/chadwick.poon/Library/Mobile Docum
 
 Vercel Hobby is the selected hosting destination. Namecheap retains the domain. The live domain remains on ChatGPT Sites until a separately requested cutover. Read [deployment instructions](docs/DEPLOYMENT.md), [architecture](docs/ARCHITECTURE.md), and [asset provenance](docs/ASSETS.md).
 
-This foundation has no database, login, payments, analytics, live AI calls, or external map requests. Story summaries are based on the supplied profile and project brief. The Videoath story includes a complete illustrative practice walkthrough with original written feedback. Deeper case studies, a real hiking trip, and any live AI demo remain content work. CP initials replace the rejected astronaut; the Untitled UI integration and final logo choice are deferred. See [the completed experience and review receipt](docs/WELCOME-EXPERIENCE.md).
+This foundation has no database, login, payments, analytics, live AI calls, or external map requests. Story summaries are based on the supplied profile and project brief. The Videoath story includes a complete illustrative practice walkthrough with original written feedback. Boardy has a separate introduction explorer with three reasons to connect and six original fictional scenarios. Deeper case studies, a real hiking trip, and any live AI demo remain content work. CP initials replace the rejected astronaut; the Untitled UI integration and final logo choice are deferred. See [the completed experience and review receipt](docs/WELCOME-EXPERIENCE.md).
+
+See [the Boardy experience](docs/BOARDY-EXPERIENCE.md) for the latest chapter, source boundaries, and verification.

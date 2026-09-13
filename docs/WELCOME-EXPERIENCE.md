@@ -30,4 +30,6 @@ Use the existing personal-site Vercel Hobby project and generated review address
 - All 14 applicable hosted desktop/mobile checks passed; the two custom-Host redirect checks passed locally and are intentionally skipped against the generated Vercel address.
 - Hosted welcome and Videoath story visually verified. The review alias is public and indexing remains disabled.
 - No custom domain is attached to the project. Automatic custom-domain assignment remains disabled; Git deployments remain disconnected. No Namecheap/DNS change or paid service was introduced.
-- The repository preserves the provider receipt at `docs/deployment-receipt.json` and the original foundation receipt at `docs/receipts/2026-09-12-foundation.json`.
+- The repository preserves the provider receipt at `docs/receipts/2026-09-12-welcome-videoath.json` and the original foundation receipt at `docs/receipts/2026-09-12-foundation.json`.
+
+Subsequent checkpoint: [Boardy experience](BOARDY-EXPERIENCE.md). This document preserves the earlier welcome and Videoath milestone.
