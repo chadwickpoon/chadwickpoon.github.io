@@ -1,6 +1,6 @@
 import { test, expect } from "@playwright/test";
 
-test("guide filters the gallery and opens a real story", async ({ page }) => {
+test("guide prioritizes the gallery without hiding worlds and opens a real story", async ({ page }) => {
   const errors: string[] = [];
   page.on("pageerror", (error) => errors.push(error.message));
   await page.goto("/");
@@ -8,7 +8,7 @@ test("guide filters the gallery and opens a real story", async ({ page }) => {
   await expect(page.locator(".experience-card")).toHaveCount(6);
   await page.getByText("The things you build", { exact: true }).click();
   await page.getByRole("button", { name: "Let’s explore" }).click();
-  await expect(page.locator(".experience-card")).toHaveCount(4);
+  await expect(page.locator(".experience-card")).toHaveCount(6);
   await expect(page.getByRole("heading", { name: "A few worlds to explore." })).toBeFocused();
   await page.locator(".experience-card").filter({ hasText: "Videoath" }).click();
   await expect(page).toHaveURL(/\/explore\/videoath$/);
@@ -20,12 +20,15 @@ test("guide filters the gallery and opens a real story", async ({ page }) => {
   expect(errors).toEqual([]);
 });
 
-test("browse, life filters, and honest empty trails", async ({ page }) => {
+test("browse, personal starting point, and honest empty trails", async ({ page }) => {
   await page.goto("/");
   await page.getByRole("button", { name: "Browse everything" }).click();
   await expect(page.locator(".experience-card")).toHaveCount(6);
-  await page.getByRole("button", { name: "Life & play" }).click();
-  await expect(page.locator(".experience-card")).toHaveCount(2);
+  await page.getByText("The person behind them", { exact: true }).click();
+  await page.getByRole("button", { name: "Let’s explore" }).click();
+  await expect(page.locator(".experience-card").first()).toHaveAttribute("href", "/explore/dota");
+  await expect(page.getByRole("group", { name: "Filter experiences" })).toHaveCount(0);
+  await expect(page.locator(".experience-card")).toHaveCount(6);
   await page.locator(".experience-card").filter({ hasText: "Take the long way." }).click();
   await expect(page).toHaveURL(/\/trails$/);
   await expect(page.getByText("First trail notes on the way.")).toBeVisible();
@@ -41,10 +44,13 @@ test("keyboard choices and reduced motion work without overflow", async ({ page 
   await page.keyboard.press("ArrowDown");
   await expect(page.getByRole("radio", { name: "The person behind them" })).toBeChecked();
   await page.getByRole("button", { name: "Let’s explore" }).click();
-  await expect(page.locator(".experience-card")).toHaveCount(2);
+  await expect(page.locator(".experience-card")).toHaveCount(6);
   expect(await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth)).toBe(true);
-  await expect(page.getByLabel("Chadwick Poon", { exact: true })).toBeVisible();
-  await expect(page.locator(".companion img")).toHaveCount(0);
+  await expect(page.getByAltText("Chadwick’s Dog Walker avatar")).toBeVisible();
+  await expect(page.locator(".guide-animation img")).toHaveAttribute("src", "/characters/dog-walker-pfp.png");
+  await expect(page.getByRole("button", { name: "Play Dog Walker animation" })).toBeVisible();
+  await page.emulateMedia({ reducedMotion: "no-preference" });
+  await expect(page.locator(".guide-animation img")).toHaveAttribute("src", "/characters/dog-walker.gif");
 });
 
 test("public routes, metadata, and missing routes have correct responses", async ({ request }) => {
@@ -57,7 +63,7 @@ test("public routes, metadata, and missing routes have correct responses", async
   }
   expect((await request.get("/explore/missing-story")).status()).toBe(404);
   expect((await request.get("/missing-route")).status()).toBe(404);
-  expect((await request.get("/characters/guide.png")).status()).toBe(200);
+  expect((await request.get("/characters/dog-walker-pfp.png")).status()).toBe(200);
   expect(await (await request.get("/robots.txt")).text()).toContain("Disallow: /");
 });
 
@@ -66,4 +72,24 @@ test("www redirect preserves a deep link and query", async ({ request }) => {
   const response = await request.get("/explore/boardy?source=test", { headers: { host: "www.chadwickpoon.com" }, maxRedirects: 0 });
   expect(response.status()).toBe(308);
   expect(response.headers().location).toBe("https://chadwickpoon.com/explore/boardy?source=test");
+});
+
+test("Dog Walker artwork loads, can pause, and remains the About avatar", async ({ page }) => {
+  await page.goto("/");
+  const animation = page.locator(".guide-animation img");
+  await expect(animation).toHaveAttribute("src", "/characters/dog-walker.gif");
+  await expect.poll(() => animation.evaluate((image: HTMLImageElement) => image.complete && image.naturalWidth > 0)).toBe(true);
+  await page.getByRole("button", { name: "Pause Dog Walker animation" }).click();
+  await expect(animation).toHaveAttribute("src", "/characters/dog-walker-pfp.png");
+  await page.getByRole("button", { name: "Play Dog Walker animation" }).click();
+  await expect(animation).toHaveAttribute("src", "/characters/dog-walker.gif");
+  await page.getByText("The person behind them", { exact: true }).click();
+  await page.getByRole("button", { name: "Let’s explore" }).click();
+  await expect(page.locator(".experience-card")).toHaveCount(6);
+  await page.getByRole("button", { name: "Browse everything" }).click();
+  await expect(page.locator(".experience-card").first()).toHaveAttribute("href", "/explore/videoath");
+  await expect(page.getByRole("group", { name: "Filter experiences" })).toHaveCount(0);
+  await page.getByRole("link", { name: "About me", exact: true }).click();
+  await expect(page.getByAltText("Chadwick’s Dog Walker avatar")).toBeVisible();
+  await expect(page.getByText(/I have a corgi/)).toBeVisible();
 });

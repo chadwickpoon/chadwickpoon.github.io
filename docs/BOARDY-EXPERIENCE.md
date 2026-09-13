@@ -46,4 +46,4 @@ The other four worlds remain concise chapters or collection introductions. Actua
 - All 20 applicable hosted desktop/mobile checks passed. The two custom-Host redirect checks passed locally and are intentionally skipped at the generated address.
 - The hosted chapter, context selection, connection result, and final sample introduction were visually verified. The revised introduction has one greeting, followed by the relevant context.
 - Review indexing remains disabled. No custom domain is attached; automatic custom-domain assignment stays disabled and Git deployments stay disconnected. No DNS change, paid service, or live messaging/AI integration was introduced.
-- The current provider receipt is `docs/deployment-receipt.json`; the prior welcome/Videoath receipt is preserved at `docs/receipts/2026-09-12-welcome-videoath.json`.
+- This milestone’s provider receipt is `docs/receipts/2026-09-12-boardy.json`; the prior welcome/Videoath receipt is preserved at `docs/receipts/2026-09-12-welcome-videoath.json`.

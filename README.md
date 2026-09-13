@@ -22,7 +22,7 @@ npx playwright install chromium
 npm test
 ```
 
-Tests cover the guided choices, gallery filtering, direct links, keyboard controls, narrow layout, metadata, missing routes, and canonical redirect. They run against a separate production server at port 4328. Set TEST_BASE_URL to verify a hosted deployment where access allows.
+Tests cover the guided choices, gallery ordering, direct links, keyboard controls, narrow layout, metadata, missing routes, and canonical redirect. They run against a separate production server at port 4328. Set TEST_BASE_URL to verify a hosted deployment where access allows.
 
 ## Project structure
 
@@ -31,7 +31,7 @@ Tests cover the guided choices, gallery filtering, direct links, keyboard contro
 | src/app | Pages, metadata, and future route handlers |
 | src/features/character | Local guide state, image presentation, speech bubble |
 | src/features/guide | Accessible opening choices |
-| src/features/gallery | Project grid and filters |
+| src/features/gallery | Project grid and ordering |
 | src/features/videoath | Illustrative practice walkthrough |
 | src/features/boardy | Guided introduction explorer |
 | src/content | Public stories and future actual trip data |
@@ -46,6 +46,6 @@ The canonical [Personal Site project](</Users/chadwick.poon/Library/Mobile Docum
 
 Vercel Hobby is the selected hosting destination. Namecheap retains the domain. The live domain remains on ChatGPT Sites until a separately requested cutover. Read [deployment instructions](docs/DEPLOYMENT.md), [architecture](docs/ARCHITECTURE.md), and [asset provenance](docs/ASSETS.md).
 
-This foundation has no database, login, payments, analytics, live AI calls, or external map requests. Story summaries are based on the supplied profile and project brief. The Videoath story includes a complete illustrative practice walkthrough with original written feedback. Boardy has a separate introduction explorer with three reasons to connect and six original fictional scenarios. Deeper case studies, a real hiking trip, and any live AI demo remain content work. CP initials replace the rejected astronaut; the Untitled UI integration and final logo choice are deferred. See [the completed experience and review receipt](docs/WELCOME-EXPERIENCE.md).
+This foundation has no database, login, payments, analytics, live AI calls, or external map requests. Story summaries are based on the supplied profile and project brief. The Videoath story includes a complete illustrative practice walkthrough with original written feedback. Boardy has a separate introduction explorer with three reasons to connect and six original fictional scenarios. Deeper case studies, a real hiking trip, and any live AI demo remain content work. The Dog Walker portrait and original GIF represent Chadwick in the welcome; the Untitled UI integration and final logo choice are deferred. See [the completed experience and review receipt](docs/WELCOME-EXPERIENCE.md).
 
-See [the Boardy experience](docs/BOARDY-EXPERIENCE.md) for the latest chapter, source boundaries, and verification.
+See [the Boardy experience](docs/BOARDY-EXPERIENCE.md) for that chapter. [Dog Walker and the open gallery](docs/DOG-WALKER-GUIDE.md) is the latest visual checkpoint.

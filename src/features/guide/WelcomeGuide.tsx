@@ -4,6 +4,7 @@ import { useState } from "react";
 import { Radio, RadioGroup, Button } from "react-aria-components";
 import type { Interest } from "@/content/experiences";
 import { CharacterCompanion } from "@/features/character/CharacterCompanion";
+import { CharacterAnimation } from "@/features/character/CharacterAnimation";
 import { CharacterMessage } from "@/features/character/CharacterMessage";
 import { useCharacter } from "@/features/character/CharacterProvider";
 
@@ -23,7 +24,7 @@ export function WelcomeGuide() {
     heading?.scrollIntoView({ behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "instant" : "smooth", block: "start" });
   }
   return <section className="welcome" aria-label="Choose your starting point">
-    <div className="guide-greeting"><CharacterCompanion /><CharacterMessage message={state.message} /></div>
+    <div className="guide-greeting"><div className="guide-introduction"><CharacterCompanion /><CharacterMessage message={state.message} /></div><CharacterAnimation /></div>
     <div className="guide-choices">
       <p className="guide-hint">Choose a starting point. You can wander from there.</p>
       <RadioGroup aria-label="What would you like to explore?" value={selected ?? ""} onChange={(value) => setSelected(value as Interest)} className="choice-list">

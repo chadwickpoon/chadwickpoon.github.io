@@ -1,0 +1,35 @@
+{
+  "id": "dpl_sZiC7UKvf9XdR29sEPAEBUYQTUxV",
+  "name": "chadwickpoon-personal-site",
+  "url": "chadwickpoon-personal-site-ej6jsa221.vercel.app",
+  "readyState": "READY",
+  "target": "production",
+  "createdAt": 1789269726170,
+  "ready": 1789269766851,
+  "alias": [
+    "chadwickpoon-personal-site-cpoon166-gmailcoms-projects.vercel.app"
+  ],
+  "sourceCommit": "1c1c6c5ff7d8abfed9db90b94afc3fb426eca3f8",
+  "sourceBranch": "codex/personal-site-foundation",
+  "projectId": "prj_Jzsu0sdAhwMEyAlh8gl1YhJOLvdX",
+  "teamId": "team_Q6wqr96efVViMyF4FVYLJv2H",
+  "plan": "hobby",
+  "autoAssignCustomDomains": false,
+  "gitLinked": false,
+  "domains": [
+    "chadwickpoon-personal-site.vercel.app"
+  ],
+  "verifiedAt": "2026-09-13T03:24:21.359Z",
+  "verification": {
+    "localChecks": 22,
+    "hostedPassed": 20,
+    "hostedSkipped": 2,
+    "skipReason": "Custom Host redirect checked locally; domain cutover not part of this release.",
+    "visual": [
+      "desktop Boardy hero and introduction choices",
+      "390px mobile context, connection result, and sample introduction",
+      "hosted Boardy chapter and introduction flow",
+      "gallery entry and onward Videoath navigation"
+    ]
+  }
+}
