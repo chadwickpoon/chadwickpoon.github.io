@@ -70,6 +70,7 @@ test("Boardy works by keyboard, with reduced motion, and from the gallery", asyn
   await page.keyboard.press("ArrowDown");
   await expect(page.getByRole("radio", { name: "Trade honest product feedback" })).toBeChecked();
   await page.getByRole("button", { name: "Explore a connection" }).click();
+  await expect(page.getByRole("heading", { name: "A reason to say hello." })).toBeFocused();
   await page.getByRole("button", { name: "Read a sample introduction" }).focus();
   await page.keyboard.press("Enter");
   await expect(page.getByRole("button", { name: "Close the sample introduction" })).toHaveAttribute("aria-expanded", "true");

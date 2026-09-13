@@ -10,4 +10,15 @@ Source files were read from the existing Videoath LetsWalk original-assets colle
 
 Lockfile installation, lint, type checking, production build, and all 24 local desktop/mobile checks passed. The checks cover all six panels after either welcome choice, reset order, absence of the filter bar, original GIF loading, pause/play, reduced-motion preference changes, About avatar, and existing Boardy/Videoath flows. Desktop and 390px mobile visual reviews confirmed the greeting, animation, controls, and gallery spacing.
 
-This is an update to the existing Vercel Hobby review site. Main-domain publishing, DNS, paid services, and live AI remain outside this change. The hosted receipt is recorded once verified.
+This is an update to the existing Vercel Hobby review site. Main-domain publishing, DNS, paid services, and live AI remain outside this change. The verified hosted receipt is recorded below.
+
+## Verified hosted update
+
+[Review the updated welcome and gallery](https://chadwickpoon-personal-site-cpoon166-gmailcoms-projects.vercel.app/).
+
+- Source: `fbd9aef9e3cf06036a4e9b0ff6b49172e45771b4` on `codex/personal-site-foundation`.
+- Deployment: `dpl_Hmxwa27j5iYFTLDy2zyMV2orTRsM`, READY on the same Vercel Hobby project and generated review address.
+- Both hosted asset files returned successfully and matched their original SHA-256 and byte sizes exactly.
+- All 22 applicable hosted checks are covered. The initial run passed 21 and exposed an existing Boardy test racing the step’s planned focus change. After adding an explicit wait for that heading focus, the focused keyboard checks passed on desktop and mobile. The two custom-Host redirect checks passed locally and are intentionally skipped at the generated review address.
+- The hosted welcome, original walking GIF, and gallery without filters were visually verified. The current receipt is `docs/deployment-receipt.json`; the prior Boardy receipt remains at `docs/receipts/2026-09-12-boardy.json`.
+- No custom-domain, DNS, billing, Videoath infrastructure, or live AI change was made. Indexing remains disabled on the review site.
