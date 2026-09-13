@@ -54,17 +54,27 @@ test("keyboard choices and reduced motion work without overflow", async ({ page 
 });
 
 test("public routes, metadata, and missing routes have correct responses", async ({ request }) => {
+  const indexingEnabled = process.env.SITE_INDEXING_ENABLED === "true";
   for (const path of ["/", "/about", "/trails", "/explore/videoath", "/explore/boardy", "/explore/alan", "/explore/fabulous", "/explore/dota"]) {
     const response = await request.get(path);
     expect(response.status(), path).toBe(200);
     const html = await response.text();
-    expect(html).toContain('name="robots" content="noindex, nofollow"');
+    expect(html).toContain(`name="robots" content="${indexingEnabled ? "index, follow" : "noindex, nofollow"}"`);
     expect(html).toContain(`rel="canonical" href="https://chadwickpoon.com${path === "/" ? "" : path}`);
   }
   expect((await request.get("/explore/missing-story")).status()).toBe(404);
   expect((await request.get("/missing-route")).status()).toBe(404);
   expect((await request.get("/characters/dog-walker-pfp.png")).status()).toBe(200);
-  expect(await (await request.get("/robots.txt")).text()).toContain("Disallow: /");
+  const robots = await (await request.get("/robots.txt")).text();
+  expect(robots).toContain(indexingEnabled ? "Allow: /" : "Disallow: /");
+  const sitemap = await (await request.get("/sitemap.xml")).text();
+  if (indexingEnabled) {
+    expect(robots).toContain("Sitemap: https://chadwickpoon.com/sitemap.xml");
+    expect(sitemap.match(/<loc>/g)).toHaveLength(8);
+    expect(sitemap).toContain("https://chadwickpoon.com/explore/boardy");
+  } else {
+    expect(sitemap).not.toContain("<loc>");
+  }
 });
 
 test("www redirect preserves a deep link and query", async ({ request }) => {

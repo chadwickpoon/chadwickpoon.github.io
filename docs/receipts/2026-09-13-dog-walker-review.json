@@ -1,0 +1,46 @@
+{
+  "id": "dpl_Hmxwa27j5iYFTLDy2zyMV2orTRsM",
+  "name": "chadwickpoon-personal-site",
+  "url": "chadwickpoon-personal-site-do3fk7q6c.vercel.app",
+  "readyState": "READY",
+  "target": "production",
+  "createdAt": 1789336476387,
+  "ready": 1789336518225,
+  "alias": [
+    "chadwickpoon-personal-site-cpoon166-gmailcoms-projects.vercel.app"
+  ],
+  "sourceCommit": "fbd9aef9e3cf06036a4e9b0ff6b49172e45771b4",
+  "sourceBranch": "codex/personal-site-foundation",
+  "projectId": "prj_Jzsu0sdAhwMEyAlh8gl1YhJOLvdX",
+  "teamId": "team_Q6wqr96efVViMyF4FVYLJv2H",
+  "plan": "hobby",
+  "autoAssignCustomDomains": false,
+  "gitLinked": false,
+  "domains": [
+    "chadwickpoon-personal-site.vercel.app"
+  ],
+  "verifiedAt": "2026-09-13T21:57:53.132Z",
+  "verification": {
+    "localChecks": 24,
+    "hostedPassed": 22,
+    "hostedSkipped": 2,
+    "skipReason": "Custom Host redirect checked locally; domain cutover not part of this release.",
+    "visual": [
+      "desktop and 390px mobile Dog Walker welcome",
+      "original animation playback and pause",
+      "gallery spacing without filters",
+      "hosted avatar, GIF, and full gallery"
+    ],
+    "assets": {
+      "/characters/dog-walker-pfp.png": {
+        "sha256": "eb8eb084b11b637916b25917573dbad1c632cdeabe7c29bcfa5af4adf98c214c",
+        "bytes": 173547
+      },
+      "/characters/dog-walker.gif": {
+        "sha256": "1d9fada23f57d071b382f77378075f07f68ae683603d324b4615d6ddbab8b075",
+        "bytes": 7836761
+      }
+    },
+    "hostedNote": "Initial hosted run: 21 passed, one keyboard test raced the planned step-focus change, two local-only Host checks skipped. Added a wait for the new heading to receive focus; focused desktop and mobile keyboard rerun passed. All 22 applicable checks covered across those runs."
+  }
+}

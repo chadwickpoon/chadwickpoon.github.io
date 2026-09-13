@@ -30,3 +30,9 @@ Current verified review: [open the site](https://chadwickpoon-personal-site-cpoo
 Keep the previous Sites deployment and DNS values through cutover. .openai/hosting.json and legacy/sites-v1 retain the former setup; do not run the Sites publisher for the new Next app. Recover the prior source from commit 5dd3e900fe1b13908af61c4395f5fa16986315d7 if needed.
 
 Sources: [Next.js on Vercel](https://vercel.com/docs/frameworks/full-stack/nextjs), [environments and promotion](https://vercel.com/docs/deployments/environments), [custom domains](https://vercel.com/docs/domains/working-with-domains/add-a-domain).
+
+## September 13 approved public release
+
+Chadwick approved publishing the reviewed Dog Walker version to chadwickpoon.com. The visual design and content remain as reviewed. Enable indexing for this specific deployment with both `--build-env SITE_INDEXING_ENABLED=true` and `--env SITE_INDEXING_ENABLED=true`. Keep the default false for subsequent local and review builds. Verify the release with `SITE_INDEXING_ENABLED=true npm run verify`, then run hosted checks with the same flag and `TEST_BASE_URL`.
+
+Use `--target=production --skip-domain` to stage the candidate and explicitly promote it after verification. Do not enable automatic custom-domain assignment or Git deployments. Current domain and provider evidence belongs in deployment-receipt.json after verification.
