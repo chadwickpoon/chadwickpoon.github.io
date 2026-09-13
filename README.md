@@ -44,7 +44,7 @@ Tests cover the guided choices, gallery ordering, direct links, keyboard control
 
 The canonical [Personal Site project](</Users/chadwick.poon/Library/Mobile Documents/iCloud~md~obsidian/Documents/alan-skills/Knowledge Base/20 Personal/Projects/Personal Site/Personal Site.md>) lives in Obsidian. Code lives in this existing repository and Codex project.
 
-Vercel Hobby is the selected hosting destination. Namecheap retains the domain. The live domain remains on ChatGPT Sites until a separately requested cutover. Read [deployment instructions](docs/DEPLOYMENT.md), [architecture](docs/ARCHITECTURE.md), and [asset provenance](docs/ASSETS.md).
+The approved site is live at [chadwickpoon.com](https://chadwickpoon.com) on Vercel Hobby. Namecheap retains registration and DNS; www permanently redirects to the apex. See [the September 13 publication receipt](docs/MAIN-SITE-PUBLICATION.md). Read [deployment instructions](docs/DEPLOYMENT.md), [architecture](docs/ARCHITECTURE.md), and [asset provenance](docs/ASSETS.md).
 
 This foundation has no database, login, payments, analytics, live AI calls, or external map requests. Story summaries are based on the supplied profile and project brief. The Videoath story includes a complete illustrative practice walkthrough with original written feedback. Boardy has a separate introduction explorer with three reasons to connect and six original fictional scenarios. Deeper case studies, a real hiking trip, and any live AI demo remain content work. The Dog Walker portrait and original GIF represent Chadwick in the welcome; the Untitled UI integration and final logo choice are deferred. See [the completed experience and review receipt](docs/WELCOME-EXPERIENCE.md).
 

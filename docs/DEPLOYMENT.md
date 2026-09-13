@@ -1,6 +1,6 @@
 # Deployment
 
-Current verified review: [open the site](https://chadwickpoon-personal-site-cpoon166-gmailcoms-projects.vercel.app). This is a public generated URL with indexing disabled. See [current implementation checkpoint](DOG-WALKER-GUIDE.md) and [provider receipt](deployment-receipt.json) for source and acceptance evidence.
+Current verified publication: [chadwickpoon.com](https://chadwickpoon.com). The approved September 13 release is live with indexing enabled. See [publication and recovery details](MAIN-SITE-PUBLICATION.md) and [provider receipt](deployment-receipt.json).
 
 ## Selected setup
 
@@ -23,8 +23,8 @@ Current verified review: [open the site](https://chadwickpoon-personal-site-cpoo
 
 1. Confirm the reviewed candidate and substantive public content. Set SITE_INDEXING_ENABLED=true for that release.
 2. Deploy/stage a production candidate. Keep automatic custom-domain assignment disabled so promotion is deliberate.
-3. Add chadwickpoon.com and www.chadwickpoon.com to this verified project; use the exact DNS values Vercel supplies. Preserve unrelated Namecheap records.
-4. Promote the reviewed deployment when requested. Verify HTTPS, apex, www redirect with path/query, direct stories, assets, robots, sitemap, and real 404s.
+3. Verify chadwickpoon.com and www.chadwickpoon.com still belong to this project. The September 13 DNS setup is complete; subsequent releases do not need DNS changes while these targets remain in use. Preserve unrelated Namecheap records.
+4. Promote the reviewed deployment when requested, then explicitly assign both domains with `vercel alias set <deployment-url> <domain>`. With autoAssignCustomDomains=false, promotion alone did not assign them. Verify the individual `/v4/aliases/<domain>` records against the intended deployment. Verify HTTPS, apex, www redirect with path/query, direct stories, assets, robots, sitemap, and real 404s.
 5. Record project ID, deployment ID, source commit, domain result, and date in the implementation receipt and Obsidian.
 
 Keep the previous Sites deployment and DNS values through cutover. .openai/hosting.json and legacy/sites-v1 retain the former setup; do not run the Sites publisher for the new Next app. Recover the prior source from commit 5dd3e900fe1b13908af61c4395f5fa16986315d7 if needed.

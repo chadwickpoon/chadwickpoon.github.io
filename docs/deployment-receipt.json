@@ -1,15 +1,31 @@
 {
-  "id": "dpl_Hmxwa27j5iYFTLDy2zyMV2orTRsM",
+  "id": "dpl_45PEHbbUMH5dVQKQC3mocM2fP6eZ",
   "name": "chadwickpoon-personal-site",
-  "url": "chadwickpoon-personal-site-do3fk7q6c.vercel.app",
+  "url": "chadwickpoon-personal-site-10eirfglu.vercel.app",
   "readyState": "READY",
   "target": "production",
-  "createdAt": 1789336476387,
-  "ready": 1789336518225,
+  "createdAt": 1789337326707,
+  "ready": 1789337359799,
   "alias": [
-    "chadwickpoon-personal-site-cpoon166-gmailcoms-projects.vercel.app"
+    "chadwickpoon-personal-site-cpoon166-gmailcoms-projects.vercel.app",
+    "chadwickpoon.com",
+    "www.chadwickpoon.com"
   ],
-  "sourceCommit": "fbd9aef9e3cf06036a4e9b0ff6b49172e45771b4",
+  "customAliases": [
+    {
+      "alias": "chadwickpoon.com",
+      "deploymentId": "dpl_45PEHbbUMH5dVQKQC3mocM2fP6eZ",
+      "projectId": "prj_Jzsu0sdAhwMEyAlh8gl1YhJOLvdX",
+      "redirect": null
+    },
+    {
+      "alias": "www.chadwickpoon.com",
+      "deploymentId": "dpl_45PEHbbUMH5dVQKQC3mocM2fP6eZ",
+      "projectId": "prj_Jzsu0sdAhwMEyAlh8gl1YhJOLvdX",
+      "redirect": "chadwickpoon.com"
+    }
+  ],
+  "sourceCommit": "50c598b7cd5c58c01ac4ab9da14521d6a401361e",
   "sourceBranch": "codex/personal-site-foundation",
   "projectId": "prj_Jzsu0sdAhwMEyAlh8gl1YhJOLvdX",
   "teamId": "team_Q6wqr96efVViMyF4FVYLJv2H",
@@ -17,19 +33,91 @@
   "autoAssignCustomDomains": false,
   "gitLinked": false,
   "domains": [
-    "chadwickpoon-personal-site.vercel.app"
+    {
+      "name": "www.chadwickpoon.com",
+      "verified": true,
+      "redirect": "chadwickpoon.com",
+      "redirectStatusCode": 308
+    },
+    {
+      "name": "chadwickpoon.com",
+      "verified": true,
+      "redirect": null,
+      "redirectStatusCode": null
+    },
+    {
+      "name": "chadwickpoon-personal-site.vercel.app",
+      "verified": true,
+      "redirect": null
+    }
   ],
-  "verifiedAt": "2026-09-13T21:57:53.132Z",
+  "publicUrl": "https://chadwickpoon.com",
+  "indexingEnabled": true,
+  "verifiedAt": "2026-09-13T22:20:39.718Z",
   "verification": {
-    "localChecks": 24,
-    "hostedPassed": 22,
-    "hostedSkipped": 2,
-    "skipReason": "Custom Host redirect checked locally; domain cutover not part of this release.",
-    "visual": [
-      "desktop and 390px mobile Dog Walker welcome",
-      "original animation playback and pause",
-      "gallery spacing without filters",
-      "hosted avatar, GIF, and full gallery"
+    "localPassed": 24,
+    "stagedHostedPassed": 22,
+    "stagedHostedSkipped": 2,
+    "customDomainPassed": 10,
+    "customDomainSkipped": 2,
+    "skipReason": "Local Host override test excluded from remote browser runs; actual www redirect verified separately.",
+    "routes": [
+      {
+        "path": "/",
+        "status": 200,
+        "server": "Vercel",
+        "indexed": true
+      },
+      {
+        "path": "/about",
+        "status": 200,
+        "server": "Vercel",
+        "indexed": true
+      },
+      {
+        "path": "/trails",
+        "status": 200,
+        "server": "Vercel",
+        "indexed": true
+      },
+      {
+        "path": "/explore/videoath",
+        "status": 200,
+        "server": "Vercel",
+        "indexed": true
+      },
+      {
+        "path": "/explore/boardy",
+        "status": 200,
+        "server": "Vercel",
+        "indexed": true
+      },
+      {
+        "path": "/explore/alan",
+        "status": 200,
+        "server": "Vercel",
+        "indexed": true
+      },
+      {
+        "path": "/explore/fabulous",
+        "status": 200,
+        "server": "Vercel",
+        "indexed": true
+      },
+      {
+        "path": "/explore/dota",
+        "status": 200,
+        "server": "Vercel",
+        "indexed": true
+      },
+      {
+        "path": "/missing-route",
+        "status": 404
+      },
+      {
+        "path": "/explore/missing-story",
+        "status": 404
+      }
     ],
     "assets": {
       "/characters/dog-walker-pfp.png": {
@@ -41,6 +129,98 @@
         "bytes": 7836761
       }
     },
-    "hostedNote": "Initial hosted run: 21 passed, one keyboard test raced the planned step-focus change, two local-only Host checks skipped. Added a wait for the new heading to receive focus; focused desktop and mobile keyboard rerun passed. All 22 applicable checks covered across those runs."
+    "redirects": [
+      {
+        "from": "https://www.chadwickpoon.com/",
+        "status": 308,
+        "to": "https://chadwickpoon.com/"
+      },
+      {
+        "from": "https://www.chadwickpoon.com/explore/boardy?source=hello&b=2",
+        "status": 308,
+        "to": "https://chadwickpoon.com/explore/boardy?source=hello&b=2"
+      }
+    ],
+    "dns": [
+      {
+        "name": "chadwickpoon.com",
+        "configuredBy": "A",
+        "misconfigured": false
+      },
+      {
+        "name": "www.chadwickpoon.com",
+        "configuredBy": "CNAME",
+        "misconfigured": false
+      }
+    ],
+    "visual": [
+      "Live custom-domain homepage and Dog Walker artwork inspected in browser",
+      "Desktop and mobile navigation, guide playback, reduced motion, metadata and routes passed on custom domain"
+    ],
+    "indexing": {
+      "robots": "User-Agent: *\nAllow: /\n\nSitemap: https://chadwickpoon.com/sitemap.xml\n",
+      "sitemapEntries": 8
+    }
+  },
+  "dnsMigration": {
+    "domain": "chadwickpoon.com",
+    "provider": "Namecheap BasicDNS",
+    "verifiedAccount": "windshear",
+    "observedAt": "2026-09-13T22:12:00Z",
+    "before": [
+      {
+        "type": "A",
+        "host": "@",
+        "value": "162.159.143.30",
+        "ttl": "Automatic"
+      },
+      {
+        "type": "A",
+        "host": "@",
+        "value": "172.66.3.26",
+        "ttl": "Automatic"
+      },
+      {
+        "type": "CNAME",
+        "host": "www",
+        "value": "custom-domains.chatgpt.site.",
+        "ttl": "Automatic"
+      }
+    ],
+    "plannedAfter": [
+      {
+        "type": "A",
+        "host": "@",
+        "value": "216.198.79.1",
+        "ttl": "Automatic"
+      },
+      {
+        "type": "A",
+        "host": "@",
+        "value": "64.29.17.1",
+        "ttl": "Automatic"
+      },
+      {
+        "type": "CNAME",
+        "host": "www",
+        "value": "9255dd35e6493113.vercel-dns-017.com.",
+        "ttl": "Automatic"
+      }
+    ],
+    "preserve": [
+      "CAA @ 0 issue letsencrypt.org",
+      "TXT _cf-custom-hostname",
+      "TXT _cf-custom-hostname.www",
+      "TXT _openai-site-verification",
+      "TXT _openai-site-verification.www",
+      "Email Forwarding and its SPF record",
+      "nameservers",
+      "DNSSEC settings"
+    ],
+    "rollback": "Restore the three before values in Namecheap. The previous ChatGPT Sites deployment and its domain verification records are retained.",
+    "saved": true,
+    "savedValuesVerifiedAfterReload": true,
+    "sixUnrelatedCAAAndTXTRecordsPreserved": true,
+    "authoritativeDnsVerified": true
   }
 }

@@ -26,5 +26,6 @@ Use Node 24. Run npm ci, npm run check, npm run build, and npm test. Playwright 
 - Selected infrastructure: a separate personal-site project on Vercel Hobby. Chadwick explicitly requires free, non-commercial use; do not upgrade or add paid services.
 - Ordinary pushes must not update the main website. Git deployments are disabled in vercel.json; review deployments are explicit. Production/custom-domain publication requires Chadwick’s request.
 - Namecheap remains the registrar. Keep chadwickpoon.com canonical and preserve www path/query redirects. Do not change live DNS as part of scaffolding or local review.
-- Keep SITE_INDEXING_ENABLED=false for this scaffold. Enable indexing only for an approved public release.
+- The approved September 13 release is live on chadwickpoon.com. Keep SITE_INDEXING_ENABLED=false for local/review builds; set it true at build time and runtime for a requested public release.
+- Promotion alone does not assign custom domains while autoAssignCustomDomains=false. Explicitly alias both domains to the approved deployment, verify individual alias records, then check the live site. Follow docs/MAIN-SITE-PUBLICATION.md.
 - Follow docs/DEPLOYMENT.md. Check exact project/team and release result; never deploy this app into Videoath’s project or change Videoath’s infrastructure.
